@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS types</title>
+
+    <!-- External css link=> A link needs to be added in <head> tag -->
+    <link rel="stylesheet" href="first.css" />
+
+    <!-- Internal css => Precedency between Internal and External css depends on the order which they defined -->
+    <!-- '!important' guarentees the Precedency over other css declarations -->
+    <style>
+      p {
+        color: crimson !important;
+        background-color: blanchedalmond;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Css demo:</h3>
+    <hr />
+
+    <!-- style attribute is nothing but inline css -> It has the highest precedence over other css types -->
+    <p style="color: aquamarine; background-color: black">
+      This is a document showing usage of different css types in fronend
+      development.
+    </p>
+    <p>This is a copy of the above paragraph. So dont read it. development.</p>
+  </body>
+</html>
