@@ -1,25 +1,54 @@
 <!-- Forms in HTML  -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forms</title>
-</head>
-<body>
-  <h3>My Login Form</h3>
-  <!-- the below action route doesn't exist, it's used as an example -->
-  <form action="localhost:3000/api/login" method="get"></form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h3>My Login Form</h3>
+    <!-- the below action route doesn't exist, it's used as an example -->
+    <form action="backend.js">
+      <!-- the 'name' attribute in input tag helps in getting the value of the field for backend task. -->
 
-  <!-- the 'name' attribute in inout tag helps in getting the value of the field for backend task. -->
-  Indian Citizen <input type="checkbox" name="Indian Citizen" id="Indian Citizen"> <br><br>
-  DOB <input type="date" name="date" id="date"> <br><br>
-  Email <input type="email" name="Email" id="Email"><br><br>
-  Password <input type="password" name="password" id="password"><br><br>
-  Profile Picture <input type="file" name="dp" id="dp">
-  <br><br><br>
-  <input type="submit" value="Login">
+      <!-- The 'for' attribute in label tag and 'id' in input tag should have same value. The label tag gives label to input tag and helps in filling data by clicking on lable name.  -->
+      <label for="Indian Citizen">Indian Citizen</label>
+      <input type="checkbox" name="Indian Citizen" id="Indian Citizen" />
+      <br /><br />
+      DOB <input type="date" name="date" id="date" /> <br /><br />
 
-</body>
+      <!-- For radio type input element the 'name' attribute should be same for other options or else it will allow multiple selection. ex: gender in below code  -->
+      Gender : Male <input type="radio" name="gender" id="gender" /> Female
+      <input type="radio" name="gender" id="gender" /> Other
+      <input type="radio" name="gender" id="gender" /> <br /><br />
+
+      <label for="Email">Email</label>
+      <input type="email" name="Email" id="Email" /><br /><br />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" /><br /><br />
+
+      <div>Profile Picture <input type="file" name="dp" id="dp" /></div>
+
+      <!-- Dropdown options -->
+      <div>
+        <label for="language">Language</label>
+        <select name="language" id="language">
+          <option value="Select">Select</option>
+          <option value="English">English</option>
+          <option value="Kannada">Kannada</option>
+          <option value="Tulu">Tulu</option>
+        </select>
+      </div>
+      <br />
+
+      <!-- The inpute type 'submit' is for submitting the form data to backend. Same way we have 'reset' for reseting the form fields. -->
+      <div>
+        <input type="submit" value="Login" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
+  </body>
 </html>
