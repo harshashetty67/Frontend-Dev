@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border, Background and width/height</title>
+    <style>
+      p#firstPara {
+        color: aqua;
+        background-color: black;
+        border: 3px solid palevioletred; /*format of 'border' : width style color*/
+        height: 50px;
+        width: 500px;
+      }
+      p#secondPara {
+        color: aqua;
+        background-color: black;
+        border-top: 10px solid green; /*border can be customized in top,bottom,right and left direction*/
+        border-bottom: 10px solid green;
+        border-right: 10px solid goldenrod;
+        border-left: 10px solid goldenrod;
+        border-top-right-radius: 10px; /*The shape of the border edge can be customized in every direction*/
+        border-bottom-right-radius: 10px;
+        height: 75px;
+        width: 500px;
+      }
+      p#thirdPara {
+        background-image: url("https://images.unsplash.com/photo-1560410770-fc235e3476d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+        height: 800px;
+        width: 500px;
+        border: 3px solid black;
+        background-repeat: no-repeat; /*stops image from repeating itslef. We can repeat image in x or y direction by using repeat-x/repeat-y*/
+        background-position: center center; /*alings the background content in x-y direction, centre-centre means exact middle*/
+      }
+    </style>
+  </head>
+  <body>
+    <p id="firstPara">
+      This shows usage of border and Background. I m thrilled to use css.
+      Hurray..!
+    </p>
+    <p id="secondPara">
+      My second new Parah. Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Fugiat, earum! Aspernatur officiis recusandae saepe quod, iste eum
+      fugiat libero inventore ipsum optio.
+    </p>
+    <p id="thirdPara">I have an image to show, see in my Background</p>
+  </body>
+</html>
