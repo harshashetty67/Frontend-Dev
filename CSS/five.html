@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS boxes</title>
+    <!-- order of boxes => element/tag-> padding -> border -> margin -->
+
+    <style>
+      /*Padding adds space for the element within border*/
+      /*Margin creates space outside the border*/
+
+      /* '*' will select all elements*/
+      * {
+        box-sizing: border-box; /*This helps in fixing the height and width of the element in align with padding and border*/
+      }
+
+      body {
+        background-color: rgb(4, 141, 141);
+      }
+      .container {
+        background-color: rgb(226, 184, 219);
+        color: rgb(5, 75, 55);
+        padding: 5px 10px 10px 5px; /*shortcur for padding/margin in all direction, Ex-> padding: top right bottom left*/
+        border: 5px solid black;
+        margin: 10px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>My New Box</h3>
+      <p id="first">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam repellat
+        eligendi voluptatibus aliquid dolorem obcaecati ea vitae asperiores
+        perferendis. Soluta deleniti quisquam expedita.
+      </p>
+    </div>
+    <div class="container">
+      <h3>My New Box</h3>
+      <p id="second">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam repellat
+        eligendi voluptatibus aliquid dolorem obcaecati ea vitae asperiores
+        perferendis. Soluta deleniti quisquam expedita.
+      </p>
+    </div>
+  </body>
+</html>
