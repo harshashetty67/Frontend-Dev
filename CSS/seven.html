@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Styling and Sudo selector</title>
+    <style>
+      #container {
+        width: 600px;
+        margin: 20px auto;
+        border: 5px solid darkgreen;
+        padding: 30px;
+        font-size: large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        clear: both;
+      }
+      .btn {
+        background-color: aquamarine;
+        color: black;
+        padding: 5px;
+        margin: 5px;
+        font-size: medium;
+        border: 1px solid black;
+        border-radius: 10px;
+        text-decoration: none; /*this removes hyperlink blue line from text*/
+      }
+
+      /*--pseudo selectors--*/
+      /*1). On hovering over the element below changes take effect*/
+      a:hover {
+        color: red;
+      }
+      /*2). On clicking the element below changes take effect=> the changes remain even after browser refreshing*/
+      a:visited {
+        color: yellowgreen;
+        background-color: black;
+      }
+
+      /* 3).This changes happen exactly when we click button and vanishes later  */
+      a:active {
+        background-color: rgb(44, 41, 41);
+        color: rgb(207, 99, 21);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="cont1">
+      <h3>My Store</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam animi
+        repellat?
+      </p>
+      <a class="btn" href="https://twitter.com" target="_blank">
+        My playlist
+      </a>
+      <button class="btn">Contact Us</button>
+    </div>
+  </body>
+</html>
