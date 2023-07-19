@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Bar</title>
+    <style>
+      #navbar {
+        border: 5px solid black;
+        margin: 10px 20px;
+        background-color: aquamarine;
+        border-radius: 15px;
+      }
+      h2 {
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: black;
+        width: 20%;
+        margin: 5px auto;
+        color: rgb(185, 185, 226);
+      }
+      #navbar ul {
+        overflow: hidden;
+      }
+      #navbar li {
+        float: left;
+        list-style: none;
+      }
+      #navbar li a {
+        text-decoration: none;
+        color: white;
+        list-style: none;
+        padding: 5px;
+        background-color: black;
+        margin: 8px;
+        border-radius: 50px;
+      }
+      #navbar li a:hover {
+        color: rgb(231, 197, 110);
+      }
+      #navbar input {
+        float: right;
+        background-color: whitesmoke;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 3px;
+        margin: 1px 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <h2 id="header">My Cart</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Help</a></li>
+        <input type="text" id="search" placeholder="Search" />
+      </ul>
+    </nav>
+  </body>
+</html>
