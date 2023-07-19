@@ -13,23 +13,24 @@
         padding: 30px;
         font-size: large;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        clear: both;
+        background-color: pink;
       }
       .btn {
-        background-color: aquamarine;
-        color: black;
+        background-color: rgb(46, 190, 247);
+        color: white;
         padding: 5px;
         margin: 5px;
         font-size: medium;
         border: 1px solid black;
         border-radius: 10px;
         text-decoration: none; /*this removes hyperlink blue line from text*/
+        cursor: pointer; /*we see the pointer when we hover over the elements*/
       }
 
       /*--pseudo selectors--*/
       /*1). On hovering over the element below changes take effect*/
       a:hover {
-        color: red;
+        color: white;
       }
       /*2). On clicking the element below changes take effect=> the changes remain even after browser refreshing*/
       a:visited {
@@ -42,6 +43,10 @@
         background-color: rgb(44, 41, 41);
         color: rgb(207, 99, 21);
       }
+
+      .btn:hover {
+        color: black;
+      }
     </style>
   </head>
   <body>
@@ -51,9 +56,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam animi
         repellat?
       </p>
-      <a class="btn" href="https://twitter.com" target="_blank">
-        My playlist
-      </a>
+      <a class="btn" href="https://visa.com" target="_blank"> My playlist </a>
       <button class="btn">Contact Us</button>
     </div>
   </body>
