@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #container {
+        background-color: antiquewhite;
+        border: 8px solid palevioletred;
+        width: 800px;
+        /* marging: y x => direction if only two values specified for margin or padding */
+        margin: 50px auto;
+        /*'auto' margin aligns the element in the center => by adding equal margin space at right and left*/
+      }
+
+      body {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      p,
+      h3 {
+        text-align: justify; /*ALigns the element content in centre,right,left or justify.*/
+      }
+
+      .item {
+        padding: 5px;
+        border: 5px solid black;
+        margin: 10px;
+      }
+
+      /*float and clear => 'float' as the name says floats in particular direction, but it may overlap with other elements which is not floated.*/
+      /*so, the 'clear' attribute indicates that clear the floated (in any direction) elements from my view/place */
+      #fruit {
+        float: left;
+        width: 50%;
+      }
+      #book {
+        float: left;
+        width: 50%;
+      }
+      #flower {
+        clear: both; /*clears right/left floated elemets from overlapping with this element*/
+        width: 50%;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <h2>My Store</h2>
+      <div id="fruit" class="item">
+        <h3>Fruit</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
+          pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Autem tempore deserunt possimus quis laudantium obcaecati! eveniet
+          quasi fuga laborum! Laboriosam.
+        </p>
+      </div>
+
+      <div id="book" class="item">
+        <h3>Book</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
+          pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Fugit, est. eveniet quasi fuga laborum! Laboriosam.
+        </p>
+      </div>
+
+      <div id="flower" class="item">
+        <h3>Flower</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed pariatur
+          eveniet quasi fuga laborum! Laboriosam.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
