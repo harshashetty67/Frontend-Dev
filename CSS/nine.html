@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display props</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      /*We can align block element to center by giving 'margin:auto', but width has to given => block elements take whole block space,so for margin to take effect width has to be given.*/
+      ul {
+        width: 50%;
+        margin: 20px auto;
+      }
+      li {
+        list-style: none;
+        width: 25%;
+        padding: 10px;
+        border: 5px solid wheat;
+        margin: 10px auto;
+        text-align: center;
+      }
+      body {
+        background-color: black;
+      }
+      img {
+        width: 70%;
+        height: 50%;
+      }
+      h3 {
+        font-size: large;
+        color: cadetblue;
+        font-family: "Arial Narrow Bold", sans-serif;
+        background-color: black;
+        border: 2.5px solid lightgreen;
+        width: 200px;
+        margin: auto;
+        text-align: center;
+      }
+      h3:hover {
+        color: brown;
+        cursor: pointer;
+        border: 2.5px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <head>
+      <h3>My Photo Gallery</h3>
+      <ul>
+        <li><img src="images/img1.jpg" alt="1st image" /></li>
+        <li><img src="images/img2.jpg" alt="2nd image" /></li>
+        <li><img src="images/img3.jpg" alt="3rd image" /></li>
+        <li><img src="images/img4.jpg" alt="4th image" /></li>
+      </ul>
+    </head>
+  </body>
+</html>
