@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning in css</title>
+    <style>
+      /* postions: static(default), relative (similar to static but we can move the element in all direction w.r.t to its original position.*/
+      /*position: relative;
+        top: 50px;*/
+
+      /* 'absolute' position is w.r.t to its first parent element, here <div> container */
+      /*#box3 {
+        position: absolute;
+        left: 50px;
+      }*/
+
+      .container {
+        background-color: bisque;
+        height: 2000px;
+      }
+      .box {
+        display: inline-block;
+        border: 5px solid palevioletred;
+        width: 100px;
+        height: 150px;
+        text-align: center;
+        font-weight: bold;
+      }
+      /* position: fixed(position w.r.t to the browser windows. the element stays at that place during scrolling)*/
+      #fixed {
+        background-color: green;
+        color: white;
+        position: fixed;
+        width: 200px;
+        top: 0px;
+      }
+      /*position: sticky(means the element will scroll until it reaches the offset value given to it by the user and then stays in its position)*/
+      #sticky {
+        position: sticky;
+        background-color: tomato;
+        width: 100px;
+        top: 100;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fixed">Im fixed bro</div>
+    <div id="sticky">Im sticky bro</div>
+    <div class="container">
+      <div class="box" id="box1">Box 1</div>
+      <div class="box" id="box2">Box 2</div>
+      <div class="box" id="box3">Box 3</div>
+    </div>
+  </body>
+</html>
