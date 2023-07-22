@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex boxes</title>
+    <style>
+      /*flex is way to structure the conatiner elements by setting display property, by default the elements ordered in row */
+      .box {
+        height: 250px;
+        border: 3px solid brown;
+        display: flex;
+        flex-direction: row; /*default setting*/
+        flex-wrap: wrap; /*This wraps the element in specified order. By default 'no-wrap'*/
+
+        /*Above two can be written in in single property*/
+        /*flex-flow: row wrap => flex in row direction and wrap in normal order*/
+
+        justify-content: center; /*aligns the items in centre*/
+        /* justify-content: space-between; adds space between elements */
+        /* justify-content: space-evenly; adds even space between elements */
+        /* justify-content: space-around; adds equal space to a element, the first and last will seem to have less space but its equal for all */
+
+        /* align-items: center; aligns vertically center, by default flex-start, we can try all other values. */
+      }
+      .stack {
+        margin: 20px;
+        width: 100px;
+        height: 80px;
+        text-align: center;
+        background-color: rgb(87, 29, 29);
+        color: rgb(250, 204, 89);
+        padding: 3px;
+      }
+      #box-1 {
+        /*properties of flex items*/
+        order: 3; /*Order vale determines the position of the item in stack, higher the value last is its postion*/
+
+        flex-shrink: 1; /*the item grows as the windows expands
+      }
+      #box-2 {
+        flex-basis: 600px; /*flex-basis is used to control the width/height depending on the direction the container is flexed*/
+      }
+      #box-3 {
+        flex-grow: 20; /*shrinks the size of the element- opposite of grow*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="stack" id="box-1">Box 1</div>
+      <div class="stack" id="box-2">Box 2</div>
+      <div class="stack" id="box-3">Box 3</div>
+      <div class="stack" id="box-4">Box 4</div>
+      <div class="stack" id="box-5">Box 5</div>
+      <div class="stack" id="box-6">Box 6</div>
+    </div>
+  </body>
+</html>
