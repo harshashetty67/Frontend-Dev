@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font units</title>
+    <style>
+      html {
+        font-size: 5px;
+      }
+      #container {
+        text-align: center;
+        font-size: 10px;
+      }
+
+      /*'rem' units takes the font-size from parent element*/
+      #part-1 {
+        font-size: 5em; /*50px*/
+        padding: 2em; /* Here padding takes font-size of part-1 only (100px) => other properties with 'em' units references its own font-size*/
+      }
+
+      /*'rem' units takes the font-size from the html element*/
+      #part-2 {
+        font-size: 5rem; /*25px*/
+        padding: 1rem; /*5px => all other properties also reference the html font-size only.*/
+      }
+
+      /*vh and vw are used set height and width w.r.t to the viewport of the browser where the html is rendered. (not used much)*/
+      #part-3 {
+        border: 5px solid black;
+        height: 50vh; /*100vh => full height of the browser*/
+        width: 100vw; /*100vw => full width of the browser*/
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h2 id="part-1">Header 1</h2>
+      <h2 id="part-2">Header 2</h2>
+      <h2 id="part-3">Header 3</h2>
+    </div>
+  </body>
+</html>
