@@ -7,6 +7,9 @@
     <title>Instamart</title>
     <link rel="stylesheet" href="../css/style.css" />
     <style>
+      *{
+        box-sizing: border-box;
+      }
       body {
         padding: 0px;
         margin: 0;
@@ -25,13 +28,28 @@
         </ul>
       </div>
 
-      <div id="mid">
-        <img src="../images/logo2.jpg" alt="Logo" /><span>Logo</span>
-      </div>
-
       <div id="right">
         <input type="text" name="search" id="search" placeholder="Search" />
       </div>
+
+      <div id="images">
+        <img src="../images/logo2.jpg" alt="Logo" />
+      </div>
+    </div>
+
+    <div class="forum">
+        <h3>PLACE THE ORDER NOW $</h3>
+        <div id="order-form">
+           <form action="backend.js">
+          <Input type="text" id="name" placeholder="Name"></Input>
+          <Input type="email" id="Email" placeholder="Email Id"></Input>
+          <Input type="number" id="mob" placeholder="Mobile Number"></Input>
+          <Input type="text" id="Address" inputmode="" placeholder="Address"></Input>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+        
+      </div>
+       
     </div>
   </body>
 </html>
