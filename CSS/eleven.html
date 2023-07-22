@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visibility and z-index</title>
+    <style>
+      .stack {
+        width: 150px;
+        height: 150px;
+        border: 3px solid black;
+      }
+      /* - z-index determines the position of the element in the stack, it can only be applied positioned elements.Doesn't take effect on static position.
+      - The element with higher value of z-index takes precednce.*/
+      #box-1 {
+        background-color: red;
+        position: relative;
+        top: 50px;
+        z-index: -1;
+      }
+      #box-2 {
+        background-color: blue;
+        position: relative;
+        top: 30px;
+        z-index: -2;
+      }
+      /*visibility:hidden, hides the element from the browser window but reserves space for it.
+      display:none does the same, but it doesn't reserve space*/
+      #box-3 {
+        background-color: yellow;
+        /* visibility: hidden; */
+        /* display: none; */
+      }
+      #box-4 {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- short cut for genrating multiple elements at once => div.class.id$*5  -->
+    <div class="stack" id="box-1"></div>
+    <div class="stack" id="box-2"></div>
+    <div class="stack" id="box-3"></div>
+    <div class="stack" id="box-4"></div>
+  </body>
+</html>
