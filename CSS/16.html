@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo selectors</title>
+    <style>
+      .container {
+        display: block;
+        width: 250px;
+        margin: auto;
+      }
+
+      form input {
+        margin: 10px;
+      }
+
+      /*Pseudo selectors*/
+      input[type="number"] {
+        color: wheat;
+        width: 200px;
+        background-color: cornflowerblue;
+      }
+
+      /*ancor tag having 'target' attribute => target='_self' being specific*/
+      a[target] {
+        background-color: black;
+        color: white;
+      }
+
+      /* nth child selector for li where n starts from 0....n => for every second element this css applies*/
+      li:nth-child(2n) {
+        color: brown;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="www.twitter.com" target="_blank">Welocme to my form</a>
+      <form action="backend.js" id="new">
+        <input type="text" class="form" placeholder="Name" />
+        <input type="number" class="form" placeholder="Age" />
+        <input type="date" class="form" placeholder="DOB" />
+      </form>
+    </div>
+
+    <ul>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+  </body>
+</html>
