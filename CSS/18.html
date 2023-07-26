@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box and Text Shadows</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .box {
+        border: 3px solid black;
+        margin: 30px 20px;
+        background-color: antiquewhite;
+        width: 300px;
+        height: 200px;
+        text-align: center;
+
+        /*box-shadow*/
+        box-shadow: 6px 4px 3px firebrick; /*syntax => box-shadow: y-axis-width x-axis-width blur-value spread-value color => we could skip blur/spread if not needed*/
+      }
+
+      /*adding shadow within the box using 'inset'*/
+      #box2 {
+        box-shadow: inset -6px -4px palegreen;
+      }
+
+      /*adding multiple shadows*/
+      #box3 {
+        box-shadow: inset -6px -4px palegreen, 5px 3px tomato;
+        /*adding text-shadow => works same as box-shadow*/
+        text-shadow: 2px 3px plum;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="box1">
+      <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+        deserunt deleniti incidunt sit delectus veritatis, enim exercitationem
+        voluptatum earum hic.
+      </div>
+      <div class="box" id="box2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
+        recusandae explicabo provident cupiditate facilis, voluptatum id.
+        Debitis velit maxime maiores?
+      </div>
+      <div class="box" id="box3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+        laudantium, porro officia numquam debitis dolorum beatae provident enim
+        voluptas officiis!
+      </div>
+    </div>
+  </body>
+</html>
