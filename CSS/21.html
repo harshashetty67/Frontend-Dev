@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transistion in CSS</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      #box {
+        border: 2px solid tomato;
+        color: khaki;
+        width: 800px;
+        text-align: center;
+        /*transistion on which property should be mentioned*/
+        /*all other properties remain almost same as animation*/
+        transition-property: color, background-color, border-radius;
+        transition-delay: 0.5s;
+        transition-duration: 2s;
+      }
+
+      #box:hover {
+        background-color: gold;
+        color: black;
+        border-radius: 30px;
+        font-family: Calibri, "Trebuchet MS", sans-serif; /*The font change effect happens immediately as its not included in transistion props*/
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates,
+        repellendus!
+      </p>
+    </div>
+  </body>
+</html>
