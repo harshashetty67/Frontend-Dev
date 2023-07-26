@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts imported -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <title>Before and After pseudo selector</title>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+        background-color: black;
+        color: aliceblue;
+      }
+
+      /*making image as background just before the first element, here <header> tag*/
+      .head::before {
+        background: url("https://picsum.photos/2000/950") no-repeat center;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3; /*less the value lighter the image visibility*/
+      }
+
+      #navigation {
+        display: flex;
+      }
+
+      #navigation li {
+        list-style: none;
+        padding: 11px 11px;
+        margin: 15px 8px;
+        font-family: Geneva, Verdana, sans-serif;
+      }
+
+      .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section {
+        font-family: "Sofia", sans-serif;
+        font-size: 1.8rem;
+      }
+
+      .section p {
+        margin: 5px 20px;
+        text-align: justify;
+      }
+
+      /*Before/After selectors*/
+      .section p::before {
+        content: "Before selectors adds content before this tag/element";
+        color: coral;
+      }
+
+      .section p::after {
+        content: "After selectors adds content after this tag/element";
+        color: cadetblue;
+      }
+
+      /*Pseudo selectors*/
+      .section h2:hover {
+        color: brown;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="head">
+      <nav class="navbar">
+        <ul id="navigation">
+          <li>Home</li>
+          <li>Orders</li>
+          <li>MarketPlace</li>
+          <li>Profile</li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="section">
+      <h2>Welcome To Ghost Town</h2>
+      <p>
+        <==> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
+        dolores consequuntur unde delectus saepe voluptatum mollitia nostrum
+        soluta. Quidem necessitatibus dolores provident natus esse illum eveniet
+        placeat minima distinctio ullam ut numquam, consequuntur rerum. Eum vel
+        assumenda alias doloremque, possimus delectus dolor onsequuntur unde
+        delectus saepe voluptatum mollitia nostrum soluta. Quidem necessitatibus
+        dolores provident natus esse illum eveniet placeat minima distinctio
+        ullam ut numquam, consequuntur rerum. Eum velsunt est, eius quidem
+        corrupti veritatis, facilis accusamus! <==>
+      </p>
+    </div>
+  </body>
+</html>
