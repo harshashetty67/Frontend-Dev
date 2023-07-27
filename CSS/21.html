@@ -16,15 +16,16 @@
         text-align: center;
         /*transistion on which property should be mentioned*/
         /*all other properties remain almost same as animation*/
-        transition-property: color, background-color, border-radius;
+        transition-property: color, background-color, border-radius, border;
         transition-delay: 0.5s;
         transition-duration: 2s;
       }
 
       #box:hover {
-        background-color: gold;
-        color: black;
-        border-radius: 30px;
+        background-color: rgb(129, 167, 238);
+        color: rgb(9, 9, 97);
+        border-radius: 50px;
+        border: 3px solid darkcyan;
         font-family: Calibri, "Trebuchet MS", sans-serif; /*The font change effect happens immediately as its not included in transistion props*/
       }
     </style>
