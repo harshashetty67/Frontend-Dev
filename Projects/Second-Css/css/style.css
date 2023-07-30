@@ -15,6 +15,7 @@
   width: 59px;
   height: 55px;
   margin: 20px 10px;
+  cursor: pointer;
   border-radius: 60%; /*border-radius: 50% will give circular shape to borders*/
 }
 
@@ -63,7 +64,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 10px 16px;
-  padding: 4px;
+  padding: 10px;
   border-radius: 20px;
 }
 
@@ -97,5 +98,52 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.45;
+}
+
+/*Header*/
+#home h2 {
+  padding: 30px;
+}
+
+/*paragraph*/
+#home p {
+  font-family: "Crete Round", serif;
+  text-align: justify;
+  font-size: 1.38rem;
+  padding: 20px;
+}
+#home button {
+  font-family: "Poppins", "Lucida Sans Regular";
+  background-color: black;
+  color: gold;
+  border: 3px solid whitesmoke;
+}
+
+/*pseudo selectors*/
+#home button:hover {
+  padding: 8px 20px;
+  color: yellowgreen;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ================ Top places styling=================== */
+
+/* utility classes => help in applying common styling to elements */
+.heading-primary {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+}
+.heading-secondary {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
 }
