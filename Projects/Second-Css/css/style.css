@@ -9,14 +9,14 @@
 /*Making the navbar fixed and styling more*/
 #navbar {
   display: flex;
-  position: fixed;
+  position: absolute;
   width: 100%;
 }
 
 /*logo styling*/
 #logo img {
-  width: 59px;
-  height: 55px;
+  width: 65px;
+  height: 60px;
   margin: 20px 10px;
   cursor: pointer;
   border-radius: 60%; /*border-radius: 50% will give circular shape to borders*/
@@ -31,7 +31,7 @@
   font-size: 16px;
   font-weight: bold;
   position: absolute;
-  top: 22px;
+  top: 15px;
   right: 30px;
   padding: 8px;
   border: 2px solid black;
@@ -56,7 +56,7 @@
 #navbar ul {
   display: flex;
   position: absolute;
-  top: 22px;
+  top: 15px;
   left: 100px;
 }
 
@@ -90,7 +90,7 @@
   justify-content: center;
   align-items: center;
   padding: 5px 150px;
-  height: 720px;
+  height: 707px;
 }
 
 /*setting background image*/
@@ -142,8 +142,20 @@
 #popular-places {
   display: flex;
   flex-direction: column;
+  position: relative;
   margin: 20px 5px;
 }
+
+#popular-places::before {
+  content: "";
+  z-index: -1;
+  background-color: skyblue;
+  opacity: 0.3;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 .place-details {
   display: flex;
   margin: 20px;
@@ -208,6 +220,78 @@
   top: 10px;
   font-family: monospace;
 }
+
+/* ============== Contact Section ================== */
+#contact-box {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  height: 600px;
+}
+
+#contact-box::before {
+  background: url("../images/contact3.jpg") no-repeat center center/cover;
+  content: "";
+  z-index: -1;
+  opacity: 0.2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#contact-box h2 {
+  width: 250px;
+  padding: 10px 2px;
+  border: 2px solid white;
+  background-color: black;
+  color: azure;
+  border-radius: 12px;
+  position: relative;
+  margin: auto;
+}
+#contact-box .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 29px 5px;
+  position: relative;
+  top: -40px;
+}
+
+.details label {
+  font-size: 1.25rem;
+  margin: 5px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.details input {
+  font-size: 1.15rem;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  margin: 10px;
+  border-radius: 7px;
+}
+
+.details .btn-form {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 2px solid black;
+  background-color: black;
+  color: whitesmoke;
+}
+
+/*Pseudo selector*/
+.details .btn-form:hover {
+  padding: 8px 16px;
+  color: rgb(131, 215, 248);
+}
+
 /* ========= Utility classes============> help in applying common styling to elements */
 .heading-primary {
   font-family: "Poppins", sans-serif;
@@ -218,6 +302,7 @@
   font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 2rem;
+  margin: 7px;
 }
 .heading-third {
   font-family: "Poppins", sans-serif;
@@ -226,8 +311,8 @@
   margin: 8px;
 }
 .btn {
-  padding: 8px 16px;
-  border-radius: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.6rem;
 }
