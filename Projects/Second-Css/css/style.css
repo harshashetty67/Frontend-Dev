@@ -264,19 +264,20 @@
 }
 
 .details label {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   margin: 5px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
 .details input {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-family: "Courier New", Courier, monospace;
   text-align: center;
   margin: 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   height: 30px;
+  width: 350px;
 }
 
 #contact-box .btn-form {
