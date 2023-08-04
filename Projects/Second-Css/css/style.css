@@ -34,7 +34,6 @@
   top: 15px;
   right: 30px;
   padding: 8px;
-  border: 2px solid black;
   border-radius: 18px;
 }
 .login i {
@@ -121,6 +120,7 @@
   top: -50px;
   left: 60px;
 }
+
 #home button {
   font-family: "Poppins", "Lucida Sans Regular";
   background-color: black;
@@ -163,26 +163,23 @@
 }
 
 #popular-places .locations {
-  border: 2px solid black;
+  border: 2px solid slategray;
   width: 350px;
   margin: 5px 15px;
   border-radius: 20px;
   background-color: black;
   color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
 }
 
 #popular-places .locations img {
   height: 200px;
   width: 300px;
   padding: 10px 5px;
-}
-
-#popular-places .locations {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3px;
 }
 
 #popular-places .locations .description {
@@ -207,6 +204,7 @@
   opacity: 0.9;
   z-index: -1;
 }
+
 #footer .credits {
   padding: 20px;
   color: rgb(209, 192, 97);

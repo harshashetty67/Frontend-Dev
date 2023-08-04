@@ -1,9 +1,69 @@
 /*Navbar*/
+#navbar {
+  flex-direction: column;
+}
+#navbar::before {
+  height: 85%;
+}
 
+#navbar li {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 7px 10px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+#logo img {
+  width: 50px;
+  height: 45px;
+  margin: 15px 10px;
+  cursor: pointer;
+  border-radius: 60%;
+}
+
+.login {
+  margin: 10px;
+  font-size: 14px;
+  top: 13px;
+  right: 30px;
+  padding: 2px;
+}
 /*Home*/
+#home {
+  padding: 5px 100px;
+  height: 508px;
+}
+
+#home::before {
+  height: 65%;
+}
+#home h2 {
+  top: -63px;
+  left: 40px;
+}
+
+#home p {
+  font-size: 14px;
+  padding: 10px;
+  top: -28px;
+  left: 60px;
+}
 
 /*Places*/
+#popular-places .place-details {
+  flex-direction: column;
+}
 
 /*Contact-Us*/
 
 /*Footer*/
+
+/* ========Utility============ */
+.heading-primary {
+  font-size: 1.7rem;
+}
+
+.heading-secondary {
+  font-size: 1rem;
+}
