@@ -253,6 +253,7 @@
   margin: auto;
   top: -50px;
 }
+
 #contact-box .details {
   display: flex;
   justify-content: center;
@@ -305,18 +306,21 @@
   text-align: center;
   font-size: 3rem;
 }
+
 .heading-secondary {
   font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 2rem;
   margin: 7px;
 }
+
 .heading-third {
   font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 1.3rem;
   margin: 8px;
 }
+
 .btn {
   padding: 8px 10px;
   border-radius: 8px;
