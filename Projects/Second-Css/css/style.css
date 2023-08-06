@@ -4,6 +4,11 @@
   padding: 0px;
 }
 
+/* For smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===================== The Navbar =========================== */
 
 /*Making the navbar fixed and styling more*/
@@ -60,6 +65,16 @@
 }
 
 #navbar li {
+  list-style: none;
+  color: black;
+  font-family: "Segoe UI", Tahoma;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 16px;
+  padding: 10px;
+  border-radius: 20px;
+}
+#navbar li a {
   list-style: none;
   color: black;
   font-family: "Segoe UI", Tahoma;

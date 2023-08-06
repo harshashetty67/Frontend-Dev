@@ -29,6 +29,7 @@
   right: 30px;
   padding: 2px;
 }
+
 /*Home*/
 #home {
   padding: 5px 100px;
@@ -51,8 +52,39 @@
 }
 
 /*Places*/
+#popular-places {
+  height: 730px;
+}
+
 #popular-places .place-details {
   flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  top: 30px;
+}
+
+#popular-places .locations img {
+  height: 120px;
+  width: 180px;
+  padding: 3px;
+}
+
+#popular-places::before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+#popular-places .locations {
+  margin: 36px auto;
+  /* border-radius: 8px; */
+  height: 80px;
+  width: 100px;
+  padding: 2px;
+}
+
+.heading-third {
+  font-size: 1rem;
+  margin: 5px;
 }
 
 /*Contact-Us*/
