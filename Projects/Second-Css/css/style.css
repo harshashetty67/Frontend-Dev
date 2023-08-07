@@ -59,9 +59,8 @@ html {
 /*styling the list*/
 #navbar ul {
   display: flex;
-  position: absolute;
-  top: 15px;
-  left: 100px;
+  justify-content: center;
+  align-items: center;
 }
 
 #navbar li {
@@ -70,17 +69,16 @@ html {
   font-family: "Segoe UI", Tahoma;
   font-size: 16px;
   font-weight: bold;
-  margin: 10px 16px;
+  margin: 6px 8px;
   padding: 10px;
   border-radius: 20px;
 }
 #navbar li a {
-  list-style: none;
+  text-decoration: none;
   color: black;
   font-family: "Segoe UI", Tahoma;
   font-size: 16px;
   font-weight: bold;
-  margin: 10px 16px;
   padding: 10px;
   border-radius: 20px;
 }
@@ -338,5 +336,5 @@ html {
   padding: 8px 10px;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
