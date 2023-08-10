@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Rows and Gaps</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(4, 150px);
+        grid-row-gap: 5px; /*spacing between rows => obsolete*/
+        grid-column-gap: 20px; /*spacing between rows => obsolete*/
+      }
+
+      /*The span area for one item => */
+      /*item selector should be used*/
+      .item:first-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        /*one liner for above*/
+        grid-row: 1 / span 2;
+      }
+
+      .item {
+        border: 3px solid teal;
+        padding: 20px;
+        color: rgb(214, 176, 78);
+        background-color: black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Box-1</div>
+      <div class="item">Box-2</div>
+      <div class="item">Box-3</div>
+      <div class="item">Box-4</div>
+      <div class="item">Box-5</div>
+      <div class="item">Box-6</div>
+      <div class="item">Box-7</div>
+      <div class="item">Box-8</div>
+      <div class="item">Box-9</div>
+      <div class="item">Box-10</div>
+      <div class="item">Box-11</div>
+      <div class="item">Box-12</div>
+    </div>
+  </body>
+</html>
