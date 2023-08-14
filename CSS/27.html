@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - Are</title>
+    <style>
+      /* using 'auto-fit' and 'minmax', we can make grid item responsive in width and height */
+      .container {
+        display: grid;
+        grid-gap: 1rem;
+        /* Spanning the differnet section  */
+        grid-template-areas:
+          "navbar navbar navbar navbar" /*takes 4 unit space of window*/
+          "home home home popular"
+          "footer footer footer footer";
+      }
+
+      .item {
+        border: 2px solid black;
+
+        background-color: rgb(111, 147, 214);
+        font-size: large;
+        font-family: Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      .item a {
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        margin: 5px;
+      }
+
+      #navbar {
+        grid-area: navbar;
+      }
+
+      #home {
+        grid-area: home;
+      }
+
+      #popular {
+        grid-area: popular;
+      }
+
+      #footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navbar" class="item">
+        <a href="#">Home</a>
+        <a href="#">Order</a>
+        <a href="#">Marketplace</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div id="home" class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+        exercitationem nobis quis saepe dolorem in dolore, doloribus facilis
+        error natus eum deserunt numquam ad rerum possimus tenetur! Illum,
+        minima iure!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aliquam exercitationem nobis quis saepe dolorem in dolore, doloribus
+        facilis error natus eum deserunt numquam ad rerum possimus tenetur!
+        Illum, minima iure!Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Aliquam exercitationem nobis quis saepe dolorem in dolore,
+        doloribus facilis error natus eum deserunt numquam ad rerum possimus
+        tenetur! Illum, minima iure! Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Accusantium nisi dolore rem quo voluptatibus fuga ex
+        at, accusamus, pariatur recusandae cumque assumenda ab cum
+        exercitationem eveniet commodi iste! Dolore, repellat quasi assumenda
+        dicta accusamus nulla, tempore possimus cumque voluptatem fuga minima
+        aspernatur voluptate id numquam animi eos excepturi alias doloremque
+        inventore vero? Optio dolores labore natus porro repellendus facere
+        beatae quam deserunt, illo, autem odit necessitatibus dolorum minus
+        impedit quia fugit nulla iure odio voluptatibus perferendis voluptate?
+        Assumenda, eligendi alias.
+      </div>
+
+      <div id="popular" class="item">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis
+        eaque facilis illum atque laboriosam quasi explicabo corporis ducimus,
+        illo architecto ut saepe amet vero vel at? Veritatis a amet
+        reprehenderit? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Nulla corporis perferendis officia neque nesciunt culpa optio, impedit
+        at nisi. Blanditiis autem nostrum dolore id laudantium cum fugit cumque,
+        tempora enim, labore ab. Aut sit pariatur delectus, animi natus ea,
+        aliquam quidem qui quas optio quaerat cum? Quas reprehenderit itaque,
+        quidem placeat nobis harum nam perspiciatis expedita fugit quo
+        cupiditate natus necessitatibus quaerat eveniet dolor, quia enim quos.
+        Est, labore culpa illum excepturi fugiat eum eos iure consectetur.
+        Labore consectetur itaque molestiae repudiandae suscipit soluta quam
+        perferendis officia, aperiam aliquid ipsam cum maiores, voluptate
+        praesentium tempora consequuntur molestias provident explicabo
+        necessitatibus.
+      </div>
+
+      <footer id="footer" class="item">
+        Copyright-2023-All-Rights-reserved.
+      </footer>
+    </div>
+  </body>
+</html>
