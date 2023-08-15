@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - Are</title>
+    <style>
+      /* using 'auto-fit' and 'minmax', we can make grid item responsive in width and height */
+      .container {
+        display: grid;
+        grid-gap: 1rem;
+        /* Spanning the differnet section  */
+        grid-template-areas:
+          "navbar navbar navbar navbar" /*takes 4 unit space of window*/
+          "home home home popular"
+          "footer footer footer footer";
+      }
+
+      .item {
+        border: 2px solid black;
+
+        background-color: rgb(111, 147, 214);
+        font-size: large;
+        font-family: Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      .item a {
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        margin: 5px;
+      }
+
+      .item h3 {
+        text-align: center;
+      }
+
+      #navbar {
+        grid-area: navbar;
+        text-align: center;
+      }
+
+      #home {
+        grid-area: home;
+        padding: 8px;
+      }
+
+      #popular {
+        grid-area: popular;
+        padding: 4px;
+      }
+
+      #footer {
+        grid-area: footer;
+        text-align: center;
+      }
+
+      /* making grid design responsive */
+      @media only screen and (max-width: 350px) {
+        .item a {
+          display: block;
+          background-color: goldenrod;
+        }
+
+        .item {
+          background-color: black;
+          color: beige;
+        }
+
+        .container {
+          /* Spanning the differnet section  */
+          grid-template-areas:
+            "navbar navbar navbar navbar" /*takes 4 unit space of window*/
+            "home home home home"
+            "popular popular popular popular"
+            "footer footer footer footer";
+        }
+      }
+      @media only screen and (min-width: 350px) and (max-width: 750px) {
+        .item a {
+          display: block;
+          background-color: goldenrod;
+        }
+
+        .item {
+          background-color: black;
+          color: beige;
+        }
+
+        /* hiding popular section */
+        #popular {
+          display: none;
+        }
+
+        .container {
+          /* Spanning the differnet section  */
+          grid-template-areas:
+            "navbar navbar navbar navbar" /*takes 4 unit space of window*/
+            "home home home home"
+            "popular popular popular popular"
+            "footer footer footer footer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navbar" class="item">
+        <a href="#">Home</a>
+        <a href="#">Order</a>
+        <a href="#">Marketplace</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div id="home" class="item">
+        <h3>Home</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+        exercitationem nobis quis saepe dolorem in dolore, doloribus facilis
+        error natus eum deserunt numquam ad rerum possimus tenetur! Illum,
+        minima iure!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aliquam exercitationem nobis quis saepe dolorem in dolore, doloribus
+        facilis error natus eum deserunt numquam eligendi alias.
+      </div>
+
+      <div id="popular" class="item">
+        <h3>Popular Quote:</h3>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis
+        eaque facilis illum atque laboriosam quasi explicabo corporis ducimus.
+      </div>
+
+      <footer id="footer" class="item">
+        Copyright-2023-All-Rights-reserved.
+      </footer>
+    </div>
+  </body>
+</html>
