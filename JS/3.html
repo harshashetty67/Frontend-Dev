@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout and setInterval</title>
+  </head>
+  <body>
+    <div>Date : <span id="timebar"></span></div>
+    <script>
+      function print(name) {
+        console.log(`Hello ${name}`);
+      }
+
+      function displayTime() {
+        let time = new Date();
+        document.getElementById("timebar").innerText = time.toUTCString();
+      }
+
+      // setTimeout(print, 4000, "Jim"); // runs the print() once after 4 seconds delay.
+      setInterval(displayTime, 3000); // displays the updated time repeatedly after 60 seconds of delay.
+    </script>
+  </body>
+</html>
